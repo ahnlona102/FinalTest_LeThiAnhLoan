@@ -1,0 +1,19 @@
+{
+  "testData": [{
+    "FTTC702": {
+      "username":"lethianhloan2002",
+      "domain": "grr.la",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "depart": "Nha Trang",
+      "arrive": "Sài Gòn",
+      "date": 5,
+      "amountTicket": 1,
+      "seatType": "Soft seat",
+      "departDate": "7/3/2024",
+      "numberOfTickets": 7
+
+    }
+
+  }]
+}
