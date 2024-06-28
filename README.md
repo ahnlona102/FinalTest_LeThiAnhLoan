@@ -7,5 +7,5 @@
 - Git
 
 ## Run on Firefox or different browsers
-Firefox: mvn test -Dbrowser=firefox
-Chrome: mvn test -Dbrowser=chrome
+- Firefox: mvn test -Dbrowser=firefox
+- Chrome: mvn test -Dbrowser=chrome
