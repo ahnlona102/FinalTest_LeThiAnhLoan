@@ -1,19 +1,31 @@
 {
-  "testData": [{
-    "FTTC702": {
-      "username":"lethianhloan2002",
-      "domain": "grr.la",
-      "password": "123456789",
-      "confirmPassword": "123456789",
-      "depart": "Nha Trang",
-      "arrive": "Sài Gòn",
-      "date": 5,
-      "amountTicket": 1,
-      "seatType": "Soft seat",
-      "departDate": "7/3/2024",
-      "numberOfTickets": 7
-
+  "testData": [
+    {
+      "FTTC702": {
+        "username": "anhloanintern",
+        "domain": "grr.la",
+        "password": "123456789",
+        "confirmPassword": "123456789",
+        "passport": "2837442934627",
+        "depart": "Nha Trang",
+        "arrive": "Đà Nẵng",
+        "date": 5,
+        "amountTicket": "1",
+        "seatType": "Soft seat",
+        "departDate": "7/3/2024",
+        "numberOfTickets": 7
+      },
+      "FTTC703": {
+        "username": "anhloan189",
+        "domain": "grr.la",
+        "password": "123456789",
+        "amountTicket": "2",
+        "seatType": "Hard seat",
+        "departDate": "7/3/2024",
+        "section": "Huế to Quảng Ngãi",
+        "totalPrice": 280000
+      }
     }
+  ]
 
-  }]
 }

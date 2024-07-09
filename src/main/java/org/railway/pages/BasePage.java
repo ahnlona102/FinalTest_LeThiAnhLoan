@@ -1,11 +1,12 @@
 package org.railway.pages;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WindowType;
 import org.railway.enums.NameHyperlink;
+import org.railway.enums.RailwayTab;
 import org.railway.utils.Action;
 import org.railway.utils.ConfigLoader;
 import org.railway.utils.Driver;
-import org.railway.enums.RailwayTab;
 
 public class BasePage {
 

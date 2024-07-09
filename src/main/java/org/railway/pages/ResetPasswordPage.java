@@ -1,13 +1,9 @@
 package org.railway.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.railway.enums.ResetPassword;
 import org.railway.enums.Title;
-import org.railway.models.User;
 import org.railway.utils.Action;
-import org.railway.utils.Driver;
 
 public class ResetPasswordPage extends BasePage{
 

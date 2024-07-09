@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="FinalTest">
+    <test name="Test">
+        <classes>
+            <class name="railway.FilterTicketTest"/>
+            <class name="railway.BookTicketTest"/>
+        </classes>
+    </test>
+</suite>

@@ -6,4 +6,5 @@ public class SuccessBookedTicket {
     public static final int SEAT_TYPE = 2;
     public static final int DEPART_DATE= 3;
     public static final int AMOUNT_TICKET = 6;
+    public static final int TOTAL_PRICE = 7;
 }

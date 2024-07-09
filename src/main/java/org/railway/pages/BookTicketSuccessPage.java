@@ -30,6 +30,7 @@ public class BookTicketSuccessPage extends BasePage {
                 String actualSeatType = cells.get(SuccessBookedTicket.SEAT_TYPE).getText();
                 String actualDeparteDate = cells.get(SuccessBookedTicket.DEPART_DATE).getText();
                 String actualAmount = cells.get(SuccessBookedTicket.AMOUNT_TICKET).getText();
+                String actualTotal = cells.get(SuccessBookedTicket.TOTAL_PRICE).getText();
                 return actualDepartStation.equals(user.getDepart()) && actualArriveStation.equals(user.getArrive()) && actualSeatType.equals(user.getSeatType()) && actualDeparteDate.equals(user.getDepartDate()) && actualAmount.equals(user.getAmountTicket());
             }
         }

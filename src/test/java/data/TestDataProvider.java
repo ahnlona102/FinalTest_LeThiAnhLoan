@@ -19,6 +19,11 @@ public class TestDataProvider {
         return getTestData("FTTC702");
     }
 
+    @DataProvider(name="FTTC703")
+    public Object[][] getFTTC703TestData() {
+        return getTestData("FTTC703");
+    }
+
     private Object[][] getTestData(String chapterKey) {
         JSONArray testData = loadTestData();
         List<Object[]> testDataList = parseTestData(testData, chapterKey);
@@ -62,9 +67,9 @@ public class TestDataProvider {
                 user.setConfirmPassword(data.optString("confirmPassword", ""));
                 user.setPassport(data.optString("passport", ""));
                 user.setDepart(data.optString("depart", ""));
-                user.setArrive(data.optString("arrive", ""));
                 user.setSeatType(data.optString("seatType", ""));
                 user.setAmountTicket(data.optString("amountTicket", ""));
+                user.setArrive(data.optString("arrive", ""));
                 user.setDepartDate(data.optString("departDate", ""));
                 user.setDate(data.getInt("date"));
                 if (testDataItem.has("email")) {
@@ -75,11 +80,15 @@ public class TestDataProvider {
 
                 String expectedMessage = data.optString("expectedMessage", "");
                 int numberOfTickets = data.optInt("numberOfTickets");
+                String section = data.optString("section","");
+                int totalPrice = data.optInt("totalPrice");
 
                 if (!expectedMessage.isEmpty()) {
                     testDataList.add(new Object[]{user, expectedMessage});
-                } else {
+                } else if(numberOfTickets > 0){
                     testDataList.add(new Object[]{user, numberOfTickets});
+                } else{
+                    testDataList.add(new Object[]{user, section, totalPrice});
                 }
             }
         }

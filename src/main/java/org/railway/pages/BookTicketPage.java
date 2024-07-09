@@ -2,12 +2,10 @@ package org.railway.pages;
 
 import org.openqa.selenium.By;
 import org.railway.enums.BookTicket;
+import org.railway.enums.RailwayTab;
+import org.railway.models.User;
 import org.railway.utils.Action;
 import org.railway.utils.DateUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 public class BookTicketPage extends BasePage{
 
@@ -15,6 +13,7 @@ public class BookTicketPage extends BasePage{
     private By bookTicketbutton = By.xpath("//legend[text()='Book ticket form']/following-sibling::input");
     //private By bookTicketTable = By.xpath("//table[@class='MyTable WideTable']");
     private String selectOption = "//select[@name='%s']";
+    //private By departDateLocator = By.xpath("//select[@name='Date']");
 
 
     public void selectDepartdate(int date){
@@ -42,5 +41,27 @@ public class BookTicketPage extends BasePage{
     public void bookTicketButton() {
         Action.scroll(bookTicketbutton);
         Action.click(bookTicketbutton);
+    }
+
+    public void bookMultipleTickets(int numberOfTickets, int startDate, User user) {
+        BookTicket[] options = {
+                BookTicket.DEPARTSTATION,
+                BookTicket.SEATTYPE,
+                BookTicket.AMOUNTTICKET,
+                BookTicket.ARRIVESTATION
+
+        };
+
+        String[] values = { user.getDepart(), user.getSeatType(), user.getAmountTicket(), user.getArrive() };
+
+        for (int i = 0; i < numberOfTickets; i++) {
+            clickTab(RailwayTab.BOOKTICKET);
+            int departDate = startDate + i;
+            selectDepartdate(departDate);
+            for (int j = 0; j < options.length; j++) {
+                select(options[j], values[j]);
+            }
+            bookTicketButton();
+        }
     }
 }
